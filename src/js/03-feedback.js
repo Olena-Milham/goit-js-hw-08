@@ -32,17 +32,29 @@ function populateForm() {
 
 function onFormSubmit(evt) {
   evt.preventDefault();
+
   const email = refs.form.elements.email.value;
   const message = refs.form.message.value;
-
   console.log({ email, message });
-  // console.log('sending a form');
-  // console.log(formData);
+  formData = {};
+
   evt.currentTarget.reset();
   localStorage.removeItem(STORAGE_KEY);
-  // formData = {};
 }
 
+// --------
+// +
+// formData.email = refs.input.value;
+// formData.message = refs.textarea.value;
+// console.log(formData);
+// formData = {};
+
+// -
+// formData[evt.target.name] = evt.target.value;
+// console.log(formData);
+// formData = {};
+
+// ------
 // ------
 //  function  populateTextarea{
 //   const savedMessage = localStorage.getItem(STORAGE_KEY);
